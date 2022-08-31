@@ -17,9 +17,10 @@ def bloop():
                 ORDER BY last_stamp DESC
             ''')
             res = cur.fetchone()
+            res = res[0] if res else 'now'
             cur.execute('''INSERT INTO vmware_explore.example VALUES (CURRENT_TIMESTAMP);''')
 
-    return f"Hello dude {str(res) or 'now'}"
+    return f"Hello dude {res}"
 
 
 if __name__ == "__main__":
