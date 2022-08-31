@@ -20,7 +20,7 @@ def bloop():
             res = res[0] if res else 'now'
             cur.execute('''INSERT INTO vmware_explore.example VALUES (CURRENT_TIMESTAMP);''')
 
-    return f"Hello dude {res}"
+    return f"Hello cool dude {res}"
 
 
 if __name__ == "__main__":
