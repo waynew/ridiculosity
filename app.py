@@ -23,5 +23,7 @@ def bloop():
 
 
 if __name__ == "__main__":
+    with open('/tmp/app.pid', 'w') as f:
+        print(os.getpid(), file=f)
     host=os.environ.get('DB_HOST', 'db.example.com')
     app.run('0.0.0.0', debug=True)
